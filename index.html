@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year</title>
+    <style>
+        body {
+            height: 97vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: cyan;
+        }
+        
+        .container {
+            width: 60vw;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 25px;
+            background: yellow;
+        }
+        
+        h1 {
+            font-size: 100px;
+            color: blue;
+        }
+        
+        img {
+            height: 150px;
+            width: 150px;
+        }
+        
+        button {
+            height: 50px;
+            width: 150px;
+            font-size: 2rem;
+            font-family: cursive;
+            border-radius: 20px;
+            outline-style: none;
+            border: 2px solid white;
+            background: red;
+        }
+        
+        @media screen and (min-width:900px) and (max-width:1265px) {
+            .container {
+                height: 90%;
+            }
+            h1 {
+                font-size: 80px;
+            }
+        }
+        
+        @media screen and (min-width:650px) and (max-width:900px) {
+            h1 {
+                font-size: 60px;
+            }
+            img {
+                height: 100px;
+                width: 100px;
+            }
+        }
+        
+        @media screen and (min-width:300px) and (max-width:650px) {
+            .container {
+                width: 90%;
+                height: 90%;
+            }
+            h1 {
+                font-size: 40px;
+            }
+            img {
+                height: 75px;
+                width: 75px;
+            }
+        }
+        
+        @media screen and (min-width:200px) and (max-width:300px) {
+            .container {
+                width: 90%;
+                height: 80%;
+            }
+            h1 {
+                font-size: 30px;
+            }
+            img {
+                height: 50px;
+                width: 50px;
+            }
+            button {
+                width: fit-content;
+                font-size: 20px;
+            }
+        }
+        
+        @media screen and (min-width:150px) and (max-width:200px) {
+            .container {
+                width: 90%;
+                height: 80%;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            img {
+                height: 50px;
+                width: 50px;
+            }
+            button {
+                width: fit-content;
+                font-size: 20px;
+            }
+        }
+        
+        @media screen and (min-width:100px) and (max-width:150px) {
+            .container {
+                width: 90%;
+                height: 80%;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            img {
+                height: 75px;
+                width: 75px;
+            }
+            button {
+                width: fit-content;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Happy New Year <br><img src="./crackers.gif" alt=""> 2024<img src="./crackers.gif" alt=""></h1>
+        <button onclick="sai()">Click</button>
+    </div>
+    <script>
+        function sai() {
+            let x = Math.floor(Math.random() * 1000000)
+            document.body.children[0].style.color = `#${x}`
+            document.body.children[0].style.textShadow = `0px 0px 10px #${x}`
+
+            let y = Math.floor(Math.random() * 1000000)
+            document.body.style.background = `#${y}`
+
+            let z = Math.floor(Math.random() * 1000000)
+            document.body.children[0].style.background = `#${z}`
+            document.body.children[0].style.boxShadow = `0px 0px 20px 10px #${x}`
+            document.body.children[0].lastElementChild.style.background = `#${y}`
+            document.body.children[0].lastElementChild.style.boxShadow = `0px 0px 20px 10px #${y}`
+        }
+    </script>
+</body>
+
+</html>
